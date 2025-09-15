@@ -1,0 +1,11 @@
+ 1.
+    - git init: tạo phân vùng được quản lý bới git
+    - git add <file_name>: thực hiện thêm file vào vùng staging
+    - git add . : thực hiện thêm toàn bộ file hoặc folder đang trỏ vào vùng staging
+    - git commit -m "message: thực hiện commit các file/folder đã add với message mong muốn
+
+2.
+    - working directory: file1, file2, file3
+    - staging area: null
+    - repository: file1
+
