@@ -1,0 +1,71 @@
+1.
+- git commit --amend: Chỉnh sửa commit gần nhất
+- git commit --amend -m"<message>": Chỉnh sửa commit gần nhất với message mong muốn
+- git restore --staged <file>: gỡ file chỉ định ra khỏi vùng staging area
+- git reset HEAD~1: xoá commit gần nhất, các file/folder vẫn ở vùng working directory, không có trong vùng staging
+
+2. 
+a,
+- local: file1, file2, file3
+- working directory: file1, file2, file3
+- staging: null
+- repository: null
+
+b,
+- local: file1, file2, file3
+- working directory: file1, file2, file3
+- staging: null
+- repository: null
+
+c, 
+- local: file1, file2, file3
+- working directory: file1, file2, file3
+- staging: null
+- repository: có 1 commit "init project" rỗng
+
+d, 
+- local: file1, file2, file3
+- working directory: file1, file2, file3
+- staging: file1
+- repository: có 1 commit "init project" rỗng
+
+e,
+- local: file1, file2, file3
+- working directory: file1, file2, file3
+- staging: null
+- repository: có 2 commit theo thứ tự:
+            - commit "add file" với file1
+            - commit "init project" rỗng
+
+f,
+- local: file1, file2, file3
+- working directory: file1, file2, file3
+- staging: file2, file3
+- repository: có 2 commit theo thứ tự:
+            - commit "add file" với file1
+            - commit "init project" rỗng
+
+g,
+- local: file1, file2, file3
+- working directory: file1, file2, file3
+- staging: file3
+- repository: có 2 commit theo thứ tự:
+            - commit "add file" với file1
+            - commit "init project" rỗng
+
+h,
+- local: file1, file2, file3
+- working directory: file1, file2, file3
+- staging: null
+- repository: có 3 commit theo thứ tự:
+            - commit "add all files" với file3
+            - commit "add file" với file1
+            - commit "init project" rỗng
+
+i,
+- local: file1, file2, file3
+- working directory: file1, file2, file3
+- staging: null
+- repository: có 2 commit theo thứ tự:
+            - commit "add file" với file1
+            - commit "init project" rỗng
