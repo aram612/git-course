@@ -53,7 +53,7 @@ i,
 => file3 được chuyển lại về vùng working directory do commit gần nhất là commit để add file3
 
 3.
-a, Khởi tạo vùng working directory quản lý thư mục bởi git
+a, Khởi tạo vùng working directory quản lý thư mục lesson-3-git bởi git
 b, 
     - file1, file2 thuộc thư mục cha lesson-3-git được tạo và nằm tại vùng working directory
     - Folder oops thuộc thư mục cha lesson-3-git được tạo và nằm tại vùng working directory
@@ -61,5 +61,5 @@ b,
 c, 
     - file1 hiển thị màu xám trên list tree file
     - thư mục oops hiển thị màu xám trên list tree file
-d, file2 được copy vào vùng staging
-e, file2 được chuyển lên vùng repository
+d, folder lesson-3-git và file con là file2 được copy vào vùng staging
+e, folder lesson-3-git và file con là file2 được chuyển lên vùng repository
