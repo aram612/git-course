@@ -7,65 +7,59 @@
 2. 
 a,
 - local: file1, file2, file3
-- working directory: file1, file2, file3
+- working directory: null
 - staging: null
 - repository: null
-
+=> chỉ khởi tạo local
 b,
-- local: file1, file2, file3
 - working directory: file1, file2, file3
 - staging: null
 - repository: null
-
+=> khởi tạo vùng quản lý thư mục bởi git
 c, 
-- local: file1, file2, file3
 - working directory: file1, file2, file3
 - staging: null
-- repository: có 1 commit "init project" rỗng
-
+- repository: null
+=> commit không thành công do chưa có file nào được chuyển vào vùng staging
 d, 
-- local: file1, file2, file3
 - working directory: file1, file2, file3
 - staging: file1
-- repository: có 1 commit "init project" rỗng
-
+- repository: null
+=> copy file1 vào vùng satging
 e,
-- local: file1, file2, file3
 - working directory: file1, file2, file3
 - staging: null
-- repository: có 2 commit theo thứ tự:
-            - commit "add file" với file1
-            - commit "init project" rỗng
-
+- repository: file1
+=> file1 được chuyển lên repository thành công do có lệnh commit và đã có lệnh add file1 trước đó
 f,
-- local: file1, file2, file3
 - working directory: file1, file2, file3
 - staging: file2, file3
-- repository: có 2 commit theo thứ tự:
-            - commit "add file" với file1
-            - commit "init project" rỗng
-
+- repository: file1
+=> file2, file3 được copy vào vùng staing
 g,
-- local: file1, file2, file3
 - working directory: file1, file2, file3
 - staging: file3
-- repository: có 2 commit theo thứ tự:
-            - commit "add file" với file1
-            - commit "init project" rỗng
-
+- repository: file1
+=> file2 được loại bỏ khỏi vùng staging
 h,
-- local: file1, file2, file3
 - working directory: file1, file2, file3
 - staging: null
-- repository: có 3 commit theo thứ tự:
-            - commit "add all files" với file3
-            - commit "add file" với file1
-            - commit "init project" rỗng
-
+- repository: file1, file3
+=> file3 được chuyển lên vùng repository thành công do có lệnh commit và đã có lệnh add file3 trước đó
 i,
-- local: file1, file2, file3
 - working directory: file1, file2, file3
 - staging: null
-- repository: có 2 commit theo thứ tự:
-            - commit "add file" với file1
-            - commit "init project" rỗng
+- repository: file1
+=> file3 được chuyển lại về vùng working directory do commit gần nhất là commit để add file3
+
+3.
+a, Khởi tạo vùng working directory quản lý thư mục bởi git
+b, 
+    - file1, file2 thuộc thư mục cha lesson-3-git được tạo và nằm tại vùng working directory
+    - Folder oops thuộc thư mục cha lesson-3-git được tạo và nằm tại vùng working directory
+    - file3 thuộc thư mục con oops được tạo và nằm tại vùng working directory
+c, 
+    - file1 hiển thị màu xám trên list tree file
+    - thư mục oops hiển thị màu xám trên list tree file
+d, file2 được copy vào vùng staging
+e, file2 được chuyển lên vùng repository
